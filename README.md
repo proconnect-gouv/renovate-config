@@ -12,3 +12,10 @@ In a repository's `renovate.json`:
   "extends": ["local>proconnect-gouv/renovate-config"]
 }
 ```
+
+Validate changes to `default.json`:
+
+```sh
+bun install
+bun run validate
+```
