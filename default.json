@@ -4,14 +4,55 @@
     "config:recommended",
     ":maintainLockFilesMonthly",
     ":prHourlyLimit4",
-    ":semanticCommits",
     ":timezone(Europe/Paris)",
     "customManagers:dockerfileVersions",
-    "docker:enableMajor",
-    "helpers:pinGitHubActionDigests"
+    "helpers:pinGitHubActionDigests",
+    "schedule:weekly"
   ],
+  "commitMessageAction": "⬆️ Bump",
+  "commitMessageExtra": "from {{{currentVersion}}} to {{{newVersion}}}",
   "dependencyDashboardAutoclose": true,
   "labels": ["dependencies"],
+  "lockFileMaintenance": {
+    "commitMessageAction": "⬆️ Lock file maintenance"
+  },
+  "minimumReleaseAge": "7 days",
+  "nix": {
+    "enabled": true
+  },
+  "packageRules": [
+    {
+      "commitMessageTopic": "{{{depName}}}",
+      "matchPackageNames": ["*"]
+    },
+    {
+      "commitMessageExtra": "from {{{currentDigestShort}}} to {{{newDigestShort}}}",
+      "matchUpdateTypes": ["digest"]
+    },
+    {
+      "groupName": "proconnect-gouv",
+      "matchPackageNames": ["@proconnect-gouv/**"]
+    },
+    {
+      "matchPackageNames": [
+        "@proconnect-gouv/**",
+        "ghcr.io/proconnect-gouv/**"
+      ],
+      "minimumReleaseAge": null
+    },
+    {
+      "enabled": false,
+      "matchPackageNames": ["@types/node"],
+      "matchUpdateTypes": ["major", "minor"]
+    },
+    {
+      "matchManagers": ["bun", "npm"],
+      "rangeStrategy": "bump"
+    }
+  ],
   "postUpdateOptions": ["npmDedupe"],
-  "rangeStrategy": "bump"
+  "semanticCommits": "disabled",
+  "vulnerabilityAlerts": {
+    "labels": ["dependencies", "security"]
+  }
 }
