@@ -1,0 +1,15 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "allowedVersions": "<18.7",
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["postgres"]
+    },
+    {
+      "allowedVersions": "<7.3",
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["redis"]
+    }
+  ]
+}
