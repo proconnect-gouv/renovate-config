@@ -1,0 +1,15 @@
+{
+  "name": "@proconnect-gouv/renovate-config",
+  "packageManager": "bun@1.4.2",
+  "private": true,
+  "scripts": {
+    "format": "prettier --write .",
+    "lint": "prettier --check .",
+    "validate": "renovate-config-validator --strict .github/renovate.json5 default.json"
+  },
+  "devDependencies": {
+    "prettier": "3.9.10",
+    "renovate": "44.216.5"
+  },
+  "prettier": {}
+}
