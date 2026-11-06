@@ -10,6 +10,11 @@
       "allowedVersions": "<7.3",
       "matchDatasources": ["docker"],
       "matchPackageNames": ["redis"]
+    },
+    {
+      "allowedVersions": "<11",
+      "matchDatasources": ["npm"],
+      "matchPackageNames": ["@sentry/**"]
     }
   ]
 }

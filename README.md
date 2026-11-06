@@ -32,6 +32,11 @@ When Scalingo ships a new version, raise its `allowedVersions` in
 [PostgreSQL](https://doc.scalingo.com/databases/postgresql/about/overview#available-versions)
 and [Redis](https://doc.scalingo.com/databases/redis/start#available-versions).
 
+It also keeps the `@sentry/*` SDKs below v11: v11 requires Sentry self-hosted
+26.4.2+, and our instance runs 24.8.0. Raise the cap when the instance is
+upgraded (see the SDK
+[migration guides](https://docs.sentry.io/platforms/javascript/migration/)).
+
 ## Development
 
 Validate the presets:
