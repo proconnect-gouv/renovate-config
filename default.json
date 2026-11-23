@@ -41,7 +41,8 @@
     {
       "matchPackageNames": [
         "@proconnect-gouv/**",
-        "ghcr.io/proconnect-gouv/**"
+        "ghcr.io/proconnect-gouv/**",
+        "proconnect-gouv/**"
       ],
       "minimumReleaseAge": null
     },
