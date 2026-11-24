@@ -8,7 +8,7 @@
     "validate": "renovate-config-validator --strict .github/renovate.json5 default.json scalingo.json"
   },
   "devDependencies": {
-    "prettier": "3.9.10",
+    "prettier": "3.10.1",
     "renovate": "44.216.5"
   },
   "prettier": {}
