@@ -1,6 +1,6 @@
 {
   "name": "@proconnect-gouv/renovate-config",
-  "packageManager": "bun@1.4.2",
+  "packageManager": "bun@1.4.4",
   "private": true,
   "scripts": {
     "format": "prettier --write .",
