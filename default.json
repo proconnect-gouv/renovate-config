@@ -11,7 +11,9 @@
   ],
   "commitMessageAction": "⬆️ Bump",
   "commitMessageExtra": "from {{{currentVersion}}} to {{{newVersion}}}",
-  "dependencyDashboardAutoclose": true,
+  "dependencyDashboard": {
+    "autoclose": true
+  },
   "labels": ["dependencies"],
   "lockFileMaintenance": {
     "commitMessageAction": "⬆️ Lock file maintenance"
