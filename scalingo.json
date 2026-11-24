@@ -2,7 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "packageRules": [
     {
-      "allowedVersions": "<18.7",
+      "allowedVersions": "<18.8",
       "matchDatasources": ["docker"],
       "matchPackageNames": ["postgres"]
     },
